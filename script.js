@@ -93,24 +93,28 @@ var generateBtn = document.querySelector("#generate");
   if (spec) {
    charType= charType.concat(specialChar)
   }
-
+   console.log(charType)
   if (charType.length === 0) {
     alert("At least one option must be selected")
     return getCharTypes()
   } //if none selected, will make them select again
  }
+
+ 
  
 
 //function incorporating previous 2 functions and generates password based off their criteria
  function generatePassword() {
   var passLength= getPasswordLength()
-  var charType= getCharTypes()
+  getCharTypes() //removed variable since the function creates the needed array
   var password= "" //blank value to be filled and display as the generated password
-  var randomChar= charType[Math.floor(Math.random()*charType.length)] //pulls random character from charType array
+  
 
   while (password.length<passLength) {
+    var randomChar= charType[Math.floor(Math.random()*charType.length)] //pulls random character from charType array
     password+=randomChar
   } //adds a random character to the password variable until the length is equal to the user selected amount from getPasswordLength
+  return password
 }
 
 
