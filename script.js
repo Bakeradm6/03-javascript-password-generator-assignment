@@ -68,10 +68,8 @@ var generateBtn = document.querySelector("#generate");
   if (length<8 || length>128) {
     alert("Must be between 8 and 128 characters")
     return getPasswordLength()
-  } else (
-
-  )
  }
+}
 
 //set which char types are included, use char variables
  function getCharTypes() {
@@ -93,7 +91,7 @@ var generateBtn = document.querySelector("#generate");
   }
 
   if (spec=true) {
-   charType= charType.concat(specChar)
+   charType= charType.concat(specialChar)
   }
 
   if (charType.length === 0) {
@@ -112,7 +110,9 @@ var generateBtn = document.querySelector("#generate");
 
   while (password.length<passLength) {
     password+=randomChar
-  } //adds a random character to the password variable until the length is equal to the user selected amount from getPasswordLength
+  }
+  
+  return password//adds a random character to the password variable until the length is equal to the user selected amount from getPasswordLength
 }
 
 
