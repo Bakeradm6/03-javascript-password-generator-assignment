@@ -48,7 +48,26 @@
 
  //Variables
  
+ var lowerChar= ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+ var upperChar=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+ var numChar=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+ var specialChar=['!','@','#','$','%','^','&','*','(',')','_','+','-','=','[',']','{','}','|',';',':',',','.','<','>','/','?','"'] 
+
  //Functions
+
+//set length, 8-128
+ function getPasswordLength()
+
+//set which char types are included, use char variables
+ function getCharTypes()
+
+//function combining previous 2 and generates password based off their criteria
+ function generatePassword()
+
+//given code from assignment, does not have function written. Displays text of generated password
+ function writePassword()
+
+
 
 
 // Assignment Code
