@@ -81,19 +81,19 @@ var generateBtn = document.querySelector("#generate");
   var spec= confirm('Include special characters?')
 
   if (lower=true) {
-   charType.concat(lowerChar)
+   charType= charType.concat(lowerChar)
   } //should add lowerChar values to the charType array
 
   if (upper=true) {
-   charType.concat(upperChar)
+   charType= charType.concat(upperChar)
   }
 
   if (num=true) {
-   charType.concat(numChar)
+   charType= charType.concat(numChar)
   }
 
   if (spec=true) {
-   charType.concat(specChar)
+   charType= charType.concat(specChar)
   }
 
   if (charType.length === 0) {
