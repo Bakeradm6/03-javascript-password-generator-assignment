@@ -53,7 +53,7 @@ var generateBtn = document.querySelector("#generate");
   if (charType.length === 0) {
     alert("At least one option must be selected")
     return getCharTypes()
-  } //if none selected, will make them select again
+  } //if none selected, will make user select again
  }
 
 //function incorporating previous 2 functions and generates password based off their criteria
