@@ -17,6 +17,7 @@ var generateBtn = document.querySelector("#generate");
   var length= 0
   length= parseInt(
   prompt("Enter the length of the password: \n(Note: Must be between 8 and 128 characters)")) //converts the string to a numeric value so it can be used in the if statement
+  alert("You have chosen "+length+" characters.")
   if (length<8 || length>128 || isNaN(length)) {
     alert("Must be between 8 and 128 characters and use only numbers") //if less than 8 or more than 128 is entered, alerts the user and restarts the function
     return getPasswordLength()
@@ -35,18 +36,22 @@ var generateBtn = document.querySelector("#generate");
  
   if (lower) {
    charType= charType.concat(lowerChar)
+   alert("You have chosen to include lower case letters")//displays message if chosen
   } //should add lowerChar values to the charType array
 
   if (upper) {
    charType= charType.concat(upperChar)
+   alert("You have chosen to include upper case letters")
   }
 
   if (num) {
    charType= charType.concat(numChar)
+   alert("You have chosen to include numeric characters")
   }
 
   if (spec) {
    charType= charType.concat(specialChar)
+   alert("You have chosen to include special characters")
   }
 
    console.log(charType)
