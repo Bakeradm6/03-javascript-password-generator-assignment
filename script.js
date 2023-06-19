@@ -75,10 +75,24 @@ var generateBtn = document.querySelector("#generate");
 
 //set which char types are included, use char variables
  function getCharTypes() {
-  confirm('Use lowercase letters?')
-  confirm('Use uppercase letters?')
-  confirm('Include numeric characters?')
-  confirm('Include special characters?')
+  var lower= confirm('Use lowercase letters?')
+  var upper= confirm('Use uppercase letters?')
+  var num= confirm('Include numeric characters?')
+  var spec= confirm('Include special characters?')
+
+  if (lower=true) {
+  charType.concat(lowerChar)
+  }
+
+  if (upper=true) {
+
+  }
+
+  if (num=true) {
+
+  }
+
+  if (spec=true)
  }
  
 
