@@ -54,7 +54,6 @@ var generateBtn = document.querySelector("#generate");
    alert("You have chosen to include special characters")
   }
 
-   console.log(charType)
   if (charType.length === 0) {
     alert("At least one option must be selected")
     return getCharTypes()
@@ -72,7 +71,6 @@ var generateBtn = document.querySelector("#generate");
     password+=randomChar
   } //adds a random character to the password variable until the length is equal to the user selected amount from getPasswordLength
   return password
-
 }
 
 // Write password to the #password input
@@ -81,7 +79,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-  console.log(password)
 }
 
 // Add event listener to generate button
