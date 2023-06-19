@@ -67,7 +67,7 @@ var generateBtn = document.querySelector("#generate");
   prompt("Enter the length of the password: \n(Note: Must be between 8 and 128 characters)"))
   if (length<8 || length>128) {
     alert("Must be between 8 and 128 characters")
-    return getPasswordLength
+    return getPasswordLength()
   } else (
 
   )
@@ -81,18 +81,25 @@ var generateBtn = document.querySelector("#generate");
   var spec= confirm('Include special characters?')
 
   if (lower=true) {
-  charType.concat(lowerChar)
+   charType.concat(lowerChar)
   }
 
   if (upper=true) {
-
+   charType.concat(upperChar)
   }
 
   if (num=true) {
-
+   charType.concact(numChar)
   }
 
-  if (spec=true)
+  if (spec=true) {
+   charType.concact(specChar)
+  }
+
+  if (charType.length === 0) {
+    alert("At least one option must be selected")
+    return getCharTypes()
+  }
  }
  
 
