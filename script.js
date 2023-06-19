@@ -89,11 +89,11 @@ var generateBtn = document.querySelector("#generate");
   }
 
   if (num=true) {
-   charType.concact(numChar)
+   charType.concat(numChar)
   }
 
   if (spec=true) {
-   charType.concact(specChar)
+   charType.concat(specChar)
   }
 
   if (charType.length === 0) {
@@ -105,9 +105,15 @@ var generateBtn = document.querySelector("#generate");
 
 //function incorporating previous 2 functions and generates password based off their criteria
  function generatePassword() {
-  var passLength= getPasswordLength
-  var charType= getCharTypes
- }
+  var passLength= getPasswordLength()
+  var charType= getCharTypes()
+  var password= ""
+  var randomChar= charType[Math.floor(Math.random()*charType.length)]
+
+  while (password.length<passLength) {
+    password+=randomChar
+  }
+}
 
 
 
