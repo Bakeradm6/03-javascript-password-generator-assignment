@@ -56,7 +56,7 @@ var generateBtn = document.querySelector("#generate");
  var upperChar=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
  var numChar=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
  var specialChar=['!','@','#','$','%','^','&','*','(',')','_','+','-','=','[',']','{','}','|',';',':',',','.','<','>','/','?','"'] 
- var charType=[] //blank array, push char types when confirmed into this array, use this array to pull characters from when gereating password
+ var charType=[] //blank array, push char types when confirmed into this array, use this array to pull characters from when generating password
 
  //Functions
 
@@ -65,7 +65,7 @@ var generateBtn = document.querySelector("#generate");
   var length= 0
   length= parseInt(
   prompt("Enter the length of the password: \n(Note: Must be between 8 and 128 characters)"))
-  if (length<8 || length>128) {
+  if (length<7 || length>129) {
     alert("Must be between 8 and 128 characters")
     return getPasswordLength()
  }
