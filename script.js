@@ -78,9 +78,9 @@ var generateBtn = document.querySelector("#generate");
   var upper= confirm('Use uppercase letters?')
   var num= confirm('Include numeric characters?')
   var spec= confirm('Include special characters?')
- 
 
-  charType= []
+  charType=[]
+ 
   if (lower) {
    charType= charType.concat(lowerChar)
   } //should add lowerChar values to the charType array
@@ -104,16 +104,12 @@ var generateBtn = document.querySelector("#generate");
   } //if none selected, will make them select again
  }
 
- 
- 
-
 //function incorporating previous 2 functions and generates password based off their criteria
  function generatePassword() {
   var passLength= getPasswordLength()
-  getCharTypes() //removed variable since the function creates the needed array
+  getCharTypes()
   var password= "" //blank value to be filled and display as the generated password
   
-
   while (password.length<passLength) {
     var randomChar= charType[Math.floor(Math.random()*charType.length)] //pulls random character from charType array
     password+=randomChar
@@ -121,8 +117,6 @@ var generateBtn = document.querySelector("#generate");
   return password
 
 }
-
-
 
 // Write password to the #password input
 function writePassword() {
