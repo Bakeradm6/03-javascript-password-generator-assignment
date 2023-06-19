@@ -47,31 +47,40 @@
 
 
  //Variables
- 
+
+ // Assignment Code
+var generateBtn = document.querySelector("#generate");
+
+//characters used to generate password
  var lowerChar= ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
  var upperChar=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
  var numChar=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
  var specialChar=['!','@','#','$','%','^','&','*','(',')','_','+','-','=','[',']','{','}','|',';',':',',','.','<','>','/','?','"'] 
+ var charType=[] //blank array, push char types when confirmed into this array, use this array to pull characters from when gereating password
 
  //Functions
 
 //set length, 8-128
- function getPasswordLength()
+ function getPasswordLength() {
+  prompt("Enter the length of the password: \n(Note: Must be between 8 and 128 characters)")
+ }
 
 //set which char types are included, use char variables
- function getCharTypes()
+ function getCharTypes() {
+  confirm('Use lowercase letters?')
+  confirm('Use uppercase letters?')
+  confirm('Include numeric characters?')
+  confirm('Include special characters?')
+ }
+ 
 
-//function combining previous 2 and generates password based off their criteria
- function generatePassword()
-
-//given code from assignment, does not have function written. Displays text of generated password
- function writePassword()
-
-
+//function incorporating previous 2 functions and generates password based off their criteria
+ function generatePassword() {
+  var passLength= getPasswordLength
+  var charType= getCharTypes
+ }
 
 
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
