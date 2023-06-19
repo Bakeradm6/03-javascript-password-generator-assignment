@@ -60,7 +60,7 @@ var generateBtn = document.querySelector("#generate");
 
  //Functions
 
-//creates prompt to enter password lenth, converts the string to a numeric value so it caa be used in the if statement, if less than 8 or more than 128 is entered, alerts the user and restarts the function
+//creates prompt to enter password lenth, converts the string to a numeric value so it can be used in the if statement, if less than 8 or more than 128 is entered, alerts the user and restarts the function
  function getPasswordLength() {
   var length= 0
   length= parseInt(
@@ -82,7 +82,7 @@ var generateBtn = document.querySelector("#generate");
 
   if (lower=true) {
    charType.concat(lowerChar)
-  }
+  } //should add lowerChar values to the charType array
 
   if (upper=true) {
    charType.concat(upperChar)
@@ -99,7 +99,7 @@ var generateBtn = document.querySelector("#generate");
   if (charType.length === 0) {
     alert("At least one option must be selected")
     return getCharTypes()
-  }
+  } //if none selected, will make them select again
  }
  
 
@@ -107,12 +107,12 @@ var generateBtn = document.querySelector("#generate");
  function generatePassword() {
   var passLength= getPasswordLength()
   var charType= getCharTypes()
-  var password= ""
-  var randomChar= charType[Math.floor(Math.random()*charType.length)]
+  var password= "" //blank value to be filled and display as the generated password
+  var randomChar= charType[Math.floor(Math.random()*charType.length)] //pulls random character from charType array
 
   while (password.length<passLength) {
     password+=randomChar
-  }
+  } //adds a random character to the password variable until the length is equal to the user selected amount from getPasswordLength
 }
 
 
