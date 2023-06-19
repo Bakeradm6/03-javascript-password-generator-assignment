@@ -17,7 +17,7 @@ var generateBtn = document.querySelector("#generate");
   var length= 0
   length= parseInt(
   prompt("Enter the length of the password: \n(Note: Must be between 8 and 128 characters)")) //converts the string to a numeric value so it can be used in the if statement
-  if (length<7 || length>129 || isNaN(length)) {
+  if (length<8 || length>128 || isNaN(length)) {
     alert("Must be between 8 and 128 characters and use only numbers") //if less than 8 or more than 128 is entered, alerts the user and restarts the function
     return getPasswordLength()
  }
