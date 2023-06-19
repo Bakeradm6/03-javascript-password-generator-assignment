@@ -69,6 +69,7 @@ var generateBtn = document.querySelector("#generate");
     alert("Must be between 8 and 128 characters")
     return getPasswordLength()
  }
+ return length
 }
 
 //set which char types are included, use char variables
@@ -77,7 +78,9 @@ var generateBtn = document.querySelector("#generate");
   var upper= confirm('Use uppercase letters?')
   var num= confirm('Include numeric characters?')
   var spec= confirm('Include special characters?')
+ 
 
+  charType= []
   if (lower) {
    charType= charType.concat(lowerChar)
   } //should add lowerChar values to the charType array
@@ -93,6 +96,7 @@ var generateBtn = document.querySelector("#generate");
   if (spec) {
    charType= charType.concat(specialChar)
   }
+
    console.log(charType)
   if (charType.length === 0) {
     alert("At least one option must be selected")
