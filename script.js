@@ -1,54 +1,6 @@
-// WHEN I click the button to generate a password
-// THEN I am presented with a series of prompts for password criteria
+//Variables
 
-// WHEN prompted for password criteria
-// THEN I select which criteria to include in the password
-
-// WHEN prompted for the length of the password
-// THEN I choose a length of at least 8 characters and no more than 128 characters
-
-// WHEN asked for character types to include in the password
-// THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-
-// WHEN all prompts are answered
-// THEN a password is generated that matches the selected criteria
-
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
-
-// When I select the button to generate a new password,
-// I am given 2 prompts, each with a list of criteria to confirm
-// Then the password is displayed in an alert or on screen
-
-// When I select the button to generate a new password
-// I am given 2 prompts, each with a list of criteria to confirm
-
-// Prompt for password length:
- // select min length (at least 8)
- // select max length (at most 128)
-// at least one character type must be selected
-// input should be validated
-
-// Prompt for character types :
-// confirm whether to include(and/or):
- //lowercase 
- //uppercase 
- //numeric
- //special characters
-// at least one character type must be selected
-// input should be validated
-
-//Once prompts are entered:
- // password is generated
- // password is displayed on page or in an alert
-
-
- //Variables
-
- // Assignment Code
+// Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 //characters used to generate password
@@ -60,13 +12,13 @@ var generateBtn = document.querySelector("#generate");
 
  //Functions
 
-//creates prompt to enter password lenth, converts the string to a numeric value so it can be used in the if statement, if less than 8 or more than 128 is entered, alerts the user and restarts the function
+//creates prompt to enter password length
  function getPasswordLength() {
   var length= 0
   length= parseInt(
-  prompt("Enter the length of the password: \n(Note: Must be between 8 and 128 characters)"))
+  prompt("Enter the length of the password: \n(Note: Must be between 8 and 128 characters)")) //converts the string to a numeric value so it can be used in the if statement
   if (length<7 || length>129 || isNaN(length)) {
-    alert("Must be between 8 and 128 characters and use only numbers")
+    alert("Must be between 8 and 128 characters and use only numbers") //if less than 8 or more than 128 is entered, alerts the user and restarts the function
     return getPasswordLength()
  }
  return length
