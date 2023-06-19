@@ -78,19 +78,19 @@ var generateBtn = document.querySelector("#generate");
   var num= confirm('Include numeric characters?')
   var spec= confirm('Include special characters?')
 
-  if (lower=true) {
+  if (lower===true) {
    charType= charType.concat(lowerChar)
   } //should add lowerChar values to the charType array
 
-  if (upper=true) {
+  if (upper===true) {
    charType= charType.concat(upperChar)
   }
 
-  if (num=true) {
+  if (num===true) {
    charType= charType.concat(numChar)
   }
 
-  if (spec=true) {
+  if (spec===true) {
    charType= charType.concat(specialChar)
   }
 
@@ -110,9 +110,7 @@ var generateBtn = document.querySelector("#generate");
 
   while (password.length<passLength) {
     password+=randomChar
-  }
-  
-  return password//adds a random character to the password variable until the length is equal to the user selected amount from getPasswordLength
+  } //adds a random character to the password variable until the length is equal to the user selected amount from getPasswordLength
 }
 
 
